@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "20542aad-438c-45bc-b14f-21f11c39acff",
+		"name": "Sistech API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9917309"
+	},
+	"item": [
+		{
+			"name": "Create API token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"name\": \"guest\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sistech-api.vercel.app/token",
+					"protocol": "https",
+					"host": [
+						"sistech-api",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Blog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2b2ed488-bec6-40b1-8223-21841e3c40b8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"test blog opal 2\",\n    \"content\": \"this is a test blog\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sistech-api.vercel.app/blog/",
+					"protocol": "https",
+					"host": [
+						"sistech-api",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"blog",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all blog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2b2ed488-bec6-40b1-8223-21841e3c40b8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sistech-api.vercel.app/blog/",
+					"protocol": "https",
+					"host": [
+						"sistech-api",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"blog",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update blog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2b2ed488-bec6-40b1-8223-21841e3c40b8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"ganti judul\",\n    \"content\": \"hi baruan nih\",\n    \"id\": \"1741b798-5daa-4f68-a283-8e236cf44b37\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sistech-api.vercel.app/blog/",
+					"protocol": "https",
+					"host": [
+						"sistech-api",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"blog",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Like blog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2b2ed488-bec6-40b1-8223-21841e3c40b8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"1741b798-5daa-4f68-a283-8e236cf44b37\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sistech-api.vercel.app/blog/like",
+					"protocol": "https",
+					"host": [
+						"sistech-api",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"blog",
+						"like"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

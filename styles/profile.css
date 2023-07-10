@@ -1,0 +1,74 @@
+.profile{
+    display: flex;
+    width: 600px;
+    flex-direction: row;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: rgb(232, 218, 218);
+    border-radius: 20px;
+  }
+  
+  .profile-picture{
+    width: 250px;
+    object-fit: contain;
+    border-radius: 20px;
+  }
+  
+  .biodata{
+    width: 400px;
+    position: relative;
+    padding: 10px 10px 10px 20px;
+  }
+
+  .name{
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    margin: 5px 0px;
+    font-weight: bold;  
+  }
+
+  .contacts{
+    display: flex;
+    font-size: 15px;
+    flex-direction: column;
+    opacity: 0.7;
+    line-height: 0px;
+    padding: 5px 0px;
+  }
+  
+  .email-icon, .linkedin-icon{
+    width:20px;
+    object-fit: contain;
+    padding-right: 7px;
+  }
+  
+  .linkedin-icon{
+    opacity: 0.8;
+  }
+  
+  .email, .linkedin{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .my-email, .my-linkedin{
+    text-decoration: none;
+    color: black;
+    opacity: 0.7;
+    margin: 15px 0px;
+    cursor: pointer;
+  }
+
+  .my-email:hover, .my-linkedin:hover{
+    text-decoration: underline;
+  }
+
+  .my-email:active, .my-linkedin:active{
+    opacity: 0.9;
+  }
+
+  .description{
+    text-align: justify;
+  }

@@ -1,0 +1,66 @@
+header{
+  height: 55px;
+  top: 0;
+  right: 0;
+  left: 0;
+  position: fixed;
+  background-color: white;
+  box-shadow: 0px 0px 5px grey;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.left-section{
+  flex: 5;
+}
+
+.menu-section{
+  flex: 1;
+  padding-right: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-navigation{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-navigation{
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.post-navigation:hover, .about-navigation:hover{
+  background-color: rgb(237, 237, 237);
+  transition: 0.15s;
+  cursor: pointer;
+}
+
+.tooltip{
+  position: absolute;
+  background-color: rgb(171, 170, 170);
+  color: white;
+  padding: 3px 7px;
+  border-radius: 3px;
+  opacity: 0;
+  bottom: -45px;
+  transition: opacity 0.15;
+  pointer-events: none;
+  white-space: nowrap;
+  font-size: 15px;
+  font-family: 'Fraunces', serif;
+}
+
+.post-navigation:hover .tooltip, .about-navigation:hover .tooltip{
+  opacity: 0.8;
+  transition: 0.6s;
+}
