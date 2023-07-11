@@ -18,7 +18,7 @@ const renderPosts = (posts) => {
             <label class="post-content">${post.content}</label>
           </div>
           <p class="post-like">${post.like}</p>
-          <input type="image" class="like-button" id="like-button-id" src="assets/like-button.png" alt="like button"/ onclick="likeButtonAnimation()"> 
+          <input type="image" class="like-button" id="like-button-id" src="assets/like-button.png" alt="like button"/> 
           <input type="image" class="edit-icon" id="edit-id" src="assets/edit-icon.png" alt="edit icon"/ onclick="scrollToTop()"> 
       </div>
     `;
