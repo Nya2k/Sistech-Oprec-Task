@@ -29,8 +29,13 @@
   position: absolute;
   top: 20;
   right: 45;
-  filter: invert(60%);
-  opacity: 0.6;
+  filter: invert(15%);
+  opacity: 0.9;
+  transition: all 0.2s ease;
+}
+
+.like-button:active {
+  transform: scale(0.80);
 }
 
 .edit-icon{

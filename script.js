@@ -17,13 +17,26 @@ const renderPosts = (posts) => {
           <div class="content-post-container">
             <label class="post-content">${post.content}</label>
           </div>
-          <input type="image" class="like-button" id="like-button-id" src="assets/like-button.png" alt="like button"/> 
+          <input type="image" class="like-button" id="like-button-id" src="assets/like-button.png" alt="like button"/ onclick="likeButtonAnimation()"> 
           <input type="image" class="edit-icon" id="edit-id" src="assets/edit-icon.png" alt="edit icon"/ onclick="scrollToTop()"> 
       </div>
     `;
   });
   postList.innerHTML = output;
 }
+
+function likeButtonAnimation() {
+  var image = document.getElementById("like-button-id");
+
+  // Add the zoom-out animation class
+  image.classList.add("zoom-out-animation");
+
+  // After a delay, remove the animation class to trigger the zoom-in effect
+  setTimeout(function() {
+    image.classList.remove("zoom-out-animation");
+  }, 1000); // Adjust the delay duration (in milliseconds) as needed
+}
+
 
 function scrollToTop() {
   window.scrollTo({
