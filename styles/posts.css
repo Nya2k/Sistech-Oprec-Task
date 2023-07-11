@@ -23,6 +23,15 @@
   padding: 3px;
 }
 
+.post-like{
+  width: 20px;
+  position: absolute;
+  top: -1;
+  right: 58;
+  padding-right: 10px;
+  opacity: 0.6;
+}
+
 .like-button{
   width: 20px;
   object-fit: contain;
