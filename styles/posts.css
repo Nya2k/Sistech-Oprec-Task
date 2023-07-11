@@ -23,6 +23,16 @@
   padding: 3px;
 }
 
+.like-button{
+  width: 20px;
+  object-fit: contain;
+  position: absolute;
+  top: 20;
+  right: 45;
+  filter: invert(60%);
+  opacity: 0.6;
+}
+
 .edit-icon{
   width: 20px;
   object-fit: contain;

@@ -3,6 +3,7 @@ const addPost = document.querySelector('.write-container');
 const title = document.getElementById('title-value');
 const content = document.getElementById('content-value');
 const postButton = document.querySelector('.post-button');
+const likeButton = document.querySelector('.like-button');
 let output = '';
 
 // POST BLOG LIST
@@ -17,6 +18,7 @@ const renderPosts = (posts) => {
           <div class="content-post-container">
             <label class="post-content">${post.content}</label>
           </div>
+          <input type="image" class="like-button" id="like-button-id" src="assets/like-button.png" alt="like button"/ onclick="likeButtonPressed()"> 
           <input type="image" class="edit-icon" id="edit-id" src="assets/edit-icon.png" alt="edit icon"/ onclick="scrollToTop()"> 
       </div>
     `;
@@ -41,10 +43,11 @@ fetch('https://sistech-api.vercel.app/blog/',{
 .then(res => res.json())
 .then(data => renderPosts(data))
 
-
+// take value of the edited post
 postList.addEventListener('click', (e) =>{
   e.preventDefault();
   let editButtonPressed = e.target.id == 'edit-id';
+  let likeButtonPressed = e.target.id == 'like-button-id';
   let userid = e.target.parentElement.dataset.id;
 
   if(editButtonPressed){
@@ -55,6 +58,7 @@ postList.addEventListener('click', (e) =>{
     title.value = titleBlog;
     content.value = contentBlog;
   }
+  
   // update the post
   postButton.addEventListener('click', (e) => {
     e.preventDefault();
@@ -74,11 +78,15 @@ postList.addEventListener('click', (e) =>{
     .then(res => res.json())
     .then(() => location.reload())
   })
+  
+  // like post
+  if (likeButtonPressed) {
+    console.log('like')
+  }
 });
 
 // POST CREATED BLOG
 addPost.addEventListener('submit', (e) => {
-  console.log('post')
   e.preventDefault();
   fetch('https://sistech-api.vercel.app/blog/', {
     method: 'POST',
