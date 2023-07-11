@@ -1,0 +1,8 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    padding-top: 65px;
+    font-family: 'Lato', sans-serif;
+   }

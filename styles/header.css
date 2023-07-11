@@ -45,6 +45,11 @@ header{
   cursor: pointer;
 }
 
+.navigation-title{
+  text-decoration: none;
+  color: black;
+}
+
 .tooltip{
   position: absolute;
   background-color: rgb(171, 170, 170);

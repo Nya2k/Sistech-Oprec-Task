@@ -22,3 +22,12 @@ position: relative;
   font-size: 15px;
   padding: 3px;
 }
+
+.edit-icon{
+  width: 20px;
+  object-fit: contain;
+  position: absolute;
+  top: 13;
+  right: 13;
+  opacity: 0.6;
+}
