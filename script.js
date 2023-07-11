@@ -17,11 +17,18 @@ const renderPosts = (posts) => {
           <div class="content-post-container">
             <label class="post-content">${post.content}</label>
           </div>
-          <input type="image" class="edit-icon" id="edit-id" src="assets/edit-icon.png" alt="edit icon"/> 
+          <input type="image" class="edit-icon" id="edit-id" src="assets/edit-icon.png" alt="edit icon"/ onclick="scrollToTop()"> 
       </div>
     `;
   });
   postList.innerHTML = output;
+}
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 }
 
 fetch('https://sistech-api.vercel.app/blog/',{

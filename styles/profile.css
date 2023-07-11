@@ -72,3 +72,65 @@
   .description{
     text-align: justify;
   }
+
+  @media (max-width: 700px) {
+    .profile{
+      width: 380px;
+      flex-direction: column;
+      padding: 25px;
+      border-radius: 15px;
+    }
+    
+    .profile-picture{
+      width: 150px;
+      border-radius: 15px;
+    }
+  
+    .name{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 5px;
+    }
+
+    .description{
+      text-align: justify;
+      padding-right: 10px;
+      margin-bottom: -5px;
+    }
+  }
+
+  @media (max-width: 470px) {
+    .profile{
+      width: 350px;
+      flex-direction: column;
+      padding: 25px;
+      border-radius: 15px;
+    }
+    
+    .profile-picture{
+      width: 150px;
+      border-radius: 15px;
+    }
+  
+    
+    .name{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 5px;
+    }
+    
+    .email-icon, .linkedin-icon{
+      padding-left: 15px;
+      padding-right: 7px;
+    }
+
+    .description{
+      text-align: justify;
+      padding-left: 15px;
+      padding-right: 25px;
+      margin-bottom: -5px;
+    }
+  }
+  

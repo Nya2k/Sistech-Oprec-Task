@@ -75,3 +75,32 @@
     opacity: 0.6;
     transition: 0.15;
   }
+
+  @media (max-width: 700px) {
+    .form-container{
+      width: 400px;
+    }
+  
+    .title{
+      font-size: 15px;
+    }
+  
+    .title-form, .content-form{
+      width: 400px;
+    }
+  }
+
+  @media (max-width: 470px) {
+    .form-container{
+      width: 370px;
+    }
+  
+    .title{
+      font-size: 15px;
+    }
+  
+    .title-form, .content-form{
+      width: 370px;
+    }
+  }
+  
